@@ -12,7 +12,6 @@ import (
 func main() {
 	r := mux.NewRouter()
 	routes.RegisterGameStore(r)
-	http.Handle("/", r)
 
 	port := "localhost:8080"
 	log.Fatal(http.ListenAndServe(port, r))
